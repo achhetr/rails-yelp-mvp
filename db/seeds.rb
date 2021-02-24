@@ -8,3 +8,4 @@
 7.times do 
   restaurant = Restaurant.create(name: Faker::Restaurant.name, address: Faker::Address.street_address, category: Restaurant.category.sample, phone_number: Faker::PhoneNumber.cell_phone_in_e164)
 end
+
