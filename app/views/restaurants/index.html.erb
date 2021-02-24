@@ -1,10 +1,16 @@
-<h1>Restaurants</h1>
+<div class="container">
+  <h1>Restaurants</h1>
 
-<ul>
-  <% @restaurants.each do |restaurant| %>
-    <h3><%= restaurant.name %></h3>
-    <p><%= restaurant.address %></p>
-    <p><%= restaurant.phone_number %></p>
-    <p><%= restaurant.category.upcase %></p>
-  <% end %>
-</ul>
+  <ul class="d-flex flex-wrap">
+      <% @restaurants.each do |restaurant| %>
+        <li class="w-50 list-unstyled my-2">
+          <%= link_to restaurant_path(restaurant.id) do %>
+            <h3><%= restaurant.name %></h3>
+          <% end %>
+          <p><%= restaurant.address %></p>
+          <p><%= restaurant.phone_number %></p>
+          <p><%= restaurant.category.upcase %></p>
+        </li>
+      <% end %>
+  </ul>
+</div>
