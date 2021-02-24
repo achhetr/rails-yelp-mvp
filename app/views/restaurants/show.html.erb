@@ -1,0 +1,15 @@
+<div class="container d-flex flex-column align-items-center mt-5 ">
+  <div class="card text-center w-50">
+    <div class="card-header">
+      Restaurant
+    </div>
+    <div class="card-body">
+      <h5 class="card-title"><%= @restaurant.name %></h5>
+      <p class="card-text"><%= @restaurant.address %></p>
+      <p class="card-text"><%= @restaurant.phone_number %></p>
+    </div>
+    <div class="card-footer text-muted">
+      <%= @restaurant.category.upcase %>
+    </div>
+  </div>
+</div>
