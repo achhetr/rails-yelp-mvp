@@ -1,0 +1,7 @@
+<%= simple_form_for restaurant do |form| %>
+  <%= form.input :name %>
+  <%= form.input :address %>
+  <%= form.input :phone_number %>
+  <%= form.input :category, as: :select, collection: Restaurant.category %>
+  <%= form.button :submit, class: "btn btn-primary" %>
+<% end %>
