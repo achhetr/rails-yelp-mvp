@@ -3,5 +3,8 @@
   <%= form.input :address %>
   <%= form.input :phone_number %>
   <%= form.input :category, as: :select, collection: Restaurant.category %>
-  <%= form.button :submit, class: "btn btn-primary" %>
+  <div class="d-flex justify-content-around">
+    <%= form.button :submit, class: "btn btn-success" %>
+    <%= link_to 'Home', restaurants_path, class: "btn btn-primary" %>
+  </div>
 <% end %>
