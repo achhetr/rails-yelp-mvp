@@ -1,0 +1,8 @@
+<%= simple_form_for [@restaurant, review] do |form| %>
+  <%= form.input :rating %>
+  <%= form.input :content %>
+  <div class="d-flex justify-content-around">
+    <%= form.button :submit, class: "btn btn-success" %>
+    <%= link_to 'Home', restaurants_path, class: "btn btn-primary" %>
+  </div>
+<% end %>
